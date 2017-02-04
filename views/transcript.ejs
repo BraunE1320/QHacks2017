@@ -1,8 +1,7 @@
-
 <!doctype html>
 <html>
 <head>
-	<title>Grades</title>
+  <title>Grades</title>
   <link rel="stylesheet" href="hacks.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
@@ -10,10 +9,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+      function getOption(){
+        var obj = document.getElementById("sel1");
+        document.getElementById("choice") = obj.options[obj.selectedIndex].text;
+      }
+  </script>
   <style>
     body { padding-top:30px; 
           word-wrap:break-word;
-          background-color: rgb(2, 52, 132);
+          background: url('http://cssslider.com/sliders/demo-10/data1/images/3.jpg');
+          background-repeat:no-repeat;
+          background-size: 1600px, 1400px;  
           height: 800px;
         }
       #pic {
@@ -50,7 +57,12 @@
       }
       @font-face{
         font-family: titleFont;
-        src: ;
+        local('Bakery'),
+        src: url('bakery.otf') format('opentype');
+        src: url('bakery.ttf') format('truetype');
+      }
+      div{
+        font-family: titleFont;
       }
 
   </style>
@@ -61,31 +73,42 @@
 </div>
 <div class="container">
   <ul id="title">
-    <h1><span></span> Question Marks </h1>
+    <h3>Question Marks </h3>
   </ul>
 </div>
-	<ul id="bod">
-		<label>Upload Transcript</label>
-  		<input type="file" class="form-control-file text-cenet" id="exampleInputFile" aria-describedby="fileHelp">
+  <ul id="bod">
+    <label>Upload Transcript</label>
+      <input type="file" class="form-control-file text-cenet" id="exampleInputFile" aria-describedby="fileHelp">
       <small id="fileHelp" class="form-text text-muted">This will automatically fill in your courses and grades.</small>
 </ul>
 <br>
 <br>
 <div class="row">
-    <div class="col-sm-2">
-      <select class="form-control" id="sel1">
-        <option>Grade Format</option>
-        <option>Letter Scale</option>
-        <option>4.3 Scale</option>
-        <option>0-100 Scale</option>
-      </select>
-   </div>
-    <div class="col-sm-2">
-      <select class="form-control" id="sel1">
-        <option>Course Code</option>
-        <option>CISC 101</option>
-        <option>CISC 102</option>
-        <option>CISC 103</option>
-      </select>
-   </div>
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#" id="action-1">Action</a></li>
+      <li><a href="#" id="action-2">Another action</a></li>
+      <li><a href="#" id="action-3">Something else here</a></li>
+    </ul>
+  </div><!-- /btn-group -->
+   <% if(id="choice" == "CISC 101"){ %>
+      <div class="col-sm-2"> 
+         <select class="form-control" id="sel1"> 
+           <option>Course Code</option> 
+           <option>CISC 101</option> 
+           <option>CISC 102</option> 
+           <option>CISC 103</option> 
+          </select> 
+        </div> 
+      <% } else { %>
+        <div class="col-sm-2"> 
+         <select class="form-control" id="sel1"> 
+           <option>Course Code</option> 
+           <option>CISC 1888</option> 
+           <option>CISC 102</option> 
+           <option>CISC 103</option> 
+          </select> 
+        </div> 
+      <% } %>
 </div>
