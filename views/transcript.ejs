@@ -1,0 +1,91 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>Grades</title>
+  <link rel="stylesheet" href="hacks.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="application.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    body { padding-top:30px; 
+          word-wrap:break-word;
+          background-color: rgb(2, 52, 132);
+          height: 800px;
+        }
+      #pic {
+        background: url('http://www.freewordpressheaders.com/wp-content/gallery/dogs-puppies/norwich-terrier-puppy-header.jpg');  
+        overflow: auto;
+        background-size: 1000px 300px; 
+        height: 300px;
+        background-repeat:no-repeat;
+        background-position: center; 
+        }
+      #title {
+        font-size: 200;
+        font-family: Impact, sans-serif;
+        color: black;
+        text-align: center;
+      }
+      #bod {
+        font-size: 100;
+        color: black;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+
+      }
+      input[type=file]{
+        margin: auto;
+      }
+      select[class="form-control"]{
+        margin: auto;
+
+      }
+      div[class="col-sm-3"]{
+        width: center;
+        margin-left: 200px;
+      }
+      @font-face{
+        font-family: titleFont;
+        src: ;
+      }
+
+  </style>
+</head>
+<div class="header">
+  <ul id="pic">
+  </ul>
+</div>
+<div class="container">
+  <ul id="title">
+    <h1><span></span> Question Marks </h1>
+  </ul>
+</div>
+	<ul id="bod">
+		<label>Upload Transcript</label>
+  		<input type="file" class="form-control-file text-cenet" id="exampleInputFile" aria-describedby="fileHelp">
+      <small id="fileHelp" class="form-text text-muted">This will automatically fill in your courses and grades.</small>
+</ul>
+<br>
+<br>
+<div class="row">
+    <div class="col-sm-2">
+      <select class="form-control" id="sel1">
+        <option>Grade Format</option>
+        <option>Letter Scale</option>
+        <option>4.3 Scale</option>
+        <option>0-100 Scale</option>
+      </select>
+   </div>
+    <div class="col-sm-2">
+      <select class="form-control" id="sel1">
+        <option>Course Code</option>
+        <option>CISC 101</option>
+        <option>CISC 102</option>
+        <option>CISC 103</option>
+      </select>
+   </div>
+</div>
