@@ -6,6 +6,7 @@ var express  = require('express');
 var app      = express();
 var port     = process.env.PORT || 8080;
 var flash    = require('connect-flash');
+var path 	 = require('path');
 
 var session  = require('express-session');
 
@@ -18,6 +19,8 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+
+app.use(express.static(path.join(__dirname,'public')));
 
 
 // routes ======================================================================
