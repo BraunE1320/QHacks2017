@@ -1,0 +1,42 @@
+body { 
+  word-wrap:break-word;
+  background: url("../images/qmarks.png");
+  background-repeat:no-repeat;
+  background-size: 100%, 100%;  
+        }
+#bod {
+  font-size: 100;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  padding-top: 5%
+
+}
+input[type=file]{
+  margin: auto;
+}
+
+#gradeFormat{
+}
+@font-face{
+  font-family: titleFont;
+  local('Bakery'),
+  src: url('bakery.otf') format('opentype');
+  src: url('bakery.ttf') format('truetype');
+}
+div{
+  font-family: titleFont;
+}
+
+#gradeFormat + #grade {
+  margin-left: 5%
+}
+
+div[class="padded"]{
+  padding-top: 13%;
+  text-align: center;
+}
+h3{
+  color: black
+  font-size: 42;
+}
